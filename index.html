@@ -1,11 +1,472 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GameStore</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .card-img-top { aspect-ratio: 12/9; object-fit: cover; object-position: top; }
+        .card-hover { border: 2px solid transparent; transition: 0.3s all ease; }
+        .card-hover:hover { border-color: #76b900; }
+        
+        /* Efeito Hover nos botões */
+        .btn-hover-neon {
+            transition: all 0.3s ease-in-out !important;
+        }
+        .btn-hover-neon:hover {
+            transform: scale(1.03);
+            background-color: #5d9200 !important;
+            box-shadow: 0 0 20px rgba(118, 185, 0, 0.7) !important;
+        }
+        .btn-outline-hover-neon {
+            transition: all 0.3s ease-in-out !important;
+        }
+        .btn-outline-hover-neon:hover {
+            transform: scale(1.02);
+            background-color: #76b900 !important;
+            color: #000000 !important;
+            box-shadow: 0 0 15px rgba(118, 185, 0, 0.5) !important;
+        }
+
+        /* Customização dos Inputs de Contato */
+        .form-floating > .form-control:focus ~ label,
+        .form-floating > .form-control:not(:placeholder-shown) ~ label {
+            color: #76b900 !important;
+        }
+        .form-control:focus {
+            border-color: #76b900 !important;
+            box-shadow: 0 0 10px rgba(118, 185, 0, 0.2) !important;
+        }
+    </style>
 </head>
-<body>
-    teste
+<body class="bg-black text-white">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom" style="--bs-border-color: #76b900; background-color: rgba(20, 20, 20, 0.95) !important; backdrop-filter: blur(10px);">
+    <div class="container">
+        <a class="navbar-brand fw-bolder tracking-wider" href="#">
+            🎮 GAME<span style="color: #76b900;">STORE</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto fw-semibold text-uppercase small">
+                <li class="nav-item">
+                    <a class="nav-link active" style="--bs-navbar-active-color: #76b900;" href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#jogos">Jogos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="inicio" class="position-relative overflow-hidden d-flex align-items-center justify-content-center min-vh-50 py-5" 
+         style="background: linear-gradient(135deg, #000000 50%, rgba(118, 185, 0, 0.15)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920') center/cover;">
+    <div class="container text-center text-md-start my-5">
+        <div class="row">
+            <div class="col-md-8 col-lg-6">
+                <span class="badge mb-3 px-3 py-2 text-black fw-bold text-uppercase" style="background-color: #76b900;">
+                    Ofertas de Inverno
+                </span>
+                <h1 class="display-4 fw-black text-white lh-1 mb-3">
+                    OS MELHORES JOGOS <br><span style="color: #76b900;">ESTÃO AQUI</span>
+                </h1>
+                <p class="lead text-secondary mb-4">Promoções absurdas com ativação imediata para PC, Xbox e PlayStation.</p>
+                <a href="#jogos" class="btn btn-lg fw-bold px-4 py-3 text-black border-0 btn-hover-neon" 
+                   style="background-color: #76b900; box-shadow: 0 0 20px rgba(118, 185, 0, 0.4);">
+                    Comprar Agora
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="jogos" class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-5 border-bottom border-secondary pb-3">
+        <h2 class="fw-bold m-0 text-white">Jogos em <span style="color: #76b900;">Destaque</span></h2>
+        <span class="text-secondary small d-none d-sm-inline">14 Produtos encontrados</span>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://imgs.search.brave.com/v1mklaQneaknvuL8ri-g4F5kNZe1Qe1KPwHD6sUxN68/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kcm9w/LWFzc2V0cy5lYS5j/b20vaW1hZ2VzLzVC/UmlUM2thUGI5TzJU/dDFrbEswbDEvNjZi/NTAzOWFjMTQ0MDlm/MTRiMTA0ZDkzZmYy/MjZhMmQvRUFfRkMy/NV9TdGFuZGFyZF9L/ZXlBcnRfMS0xXzEy/MDB4MTIwMC5qcGc" class="card-img-top" alt="EA FC 25">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-15%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">EA FC 25</h5>
+                        <p class="card-text text-secondary small">A experiência mais realista do futebol mundial.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 349,90</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 299,90</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg?t=1765387725" class="card-img-top" alt="GTA V">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-50%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">GTA V</h5>
+                        <p class="card-text text-secondary small">A experiência mais realista do mundo do crime.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 299,90</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 150,90</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg?t=1780446081" class="card-img-top" alt="Monster Hunter Wilds">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Monster Hunter Wilds</h5>
+                        <p class="card-text text-secondary small">Essa é uma história de monstros e humanos.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 279,00</span>
+                            <h4 class="fw-bold mb-3" style="color: #76b900;">R$ 117,18</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <img src="https://imgs.search.brave.com/QKre8BOCtN3OJksqX7gCvXu70aKx86rbHAzrKX-9Xvc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwLmdhbWVyYW50/aW1hZ2VzLmNvbS93/b3JkcHJlc3Mvd3At/Y29udGVudC91cGxv/YWRzLzIwMjQvMTIv/bWl4Y29sbGFnZS0w/NS1kZWMtMjAyNC0w/Ny0xNi1wbS05MzMw/LmpwZz9xPTUwJmZp/dD1jcm9wJnc9NDgw/Jmg9NjAwJmRwcj0x/LjU" class="card-img-top" alt="Sons of The Forest">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Sons of The Forest</h5>
+                        <p class="card-text text-secondary small">Sobreviva aos horrores de uma ilha isolada.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 88,99</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 26,69</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/e9047d8ec47ae3d94bb8b464fb0fc9e9972b4ac7/header.jpg?t=1769690377" class="card-img-top" alt="Cyberpunk 2077">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-50%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Cyberpunk 2077</h5>
+                        <p class="card-text text-secondary small">Explore a megalópole futurista de Night City.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 199,90</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 99,95</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg?t=1767883716" class="card-img-top" alt="Elden Ring">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Elden Ring</h5>
+                        <p class="card-text text-secondary small">Suba e seja guiado pela graça nas Terras Intermédias.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 229,90</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg?t=1759502961" class="card-img-top" alt="Red Dead Redemption 2">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-67%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Red Dead Redemption 2</h5>
+                        <p class="card-text text-secondary small">Uma jornada épica pelo fim da era do faroeste.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 299,90</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 98,96</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/a3cdc6f40d97df8ac993679c2dd1edeb5222421e/header.jpg?t=1778797474" class="card-img-top" alt="Hogwarts Legacy">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Hogwarts Legacy</h5>
+                        <p class="card-text text-secondary small">Viva o inesperado no mundo bruxo dos anos 1800.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 249,99</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ad9240e088f953a84aee814034c50a6a92bf4516/header.jpg?t=1768303991" class="card-img-top" alt="The Witcher 3">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-75%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">The Witcher 3: Wild Hunt</h5>
+                        <p class="card-text text-secondary small">Torne-se Geralt de Rívia, o lendário caçador.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 129,99</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 32,49</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2050650/header.jpg?t=1772502922" class="card-img-top" alt="Resident Evil 4">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-25%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Resident Evil 4 Remake</h5>
+                        <p class="card-text text-secondary small">Enfrente o pesadelo biológico que mudou tudo.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 169,00</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 126,75</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1777363040" class="card-img-top" alt="Baldur's Gate 3">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Baldur's Gate 3</h5>
+                        <p class="card-text text-secondary small">Reúna seu grupo e retorne aos Reinos Esquecidos.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 199,99</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/9643916b0262f1e6d5d002098569e970346f6fc4/header_brazilian.jpg?t=1779899567" class="card-img-top" alt="Helldivers 2">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Helldivers 2</h5>
+                        <p class="card-text text-secondary small">Lute pela Liberdade em uma galáxia hostil.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 199,50</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/header_brazilian.jpg?t=1777395376" class="card-img-top" alt="It Takes Two">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-65%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">It Takes Two</h5>
+                        <p class="card-text text-secondary small">Embarque na jornada cooperativa mais maluca da vida.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 179,00</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 62,65</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-hover h-100 bg-dark text-white shadow-lg">
+                <div class="position-relative">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/header.jpg?t=1762888662" class="card-img-top" alt="Sekiro">
+                    <span class="badge position-absolute top-0 end-0 m-2 text-black fw-bold" style="background-color: #76b900;">-50%</span>
+                </div>
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="mb-3">
+                        <h5 class="card-title fw-bold text-truncate mb-1">Sekiro: Shadows Die Twice</h5>
+                        <p class="card-text text-secondary small">Trace seu próprio caminho de vingança com honra.</p>
+                    </div>
+                    <div>
+                        <div class="d-flex align-items-baseline gap-2 mb-3">
+                            <span class="text-secondary text-decoration-line-through small">R$ 274,00</span>
+                            <h4 class="fw-bold m-0" style="color: #76b900;">R$ 137,00</h4>
+                        </div>
+                        <button class="btn w-100 fw-bold text-uppercase border-2 btn-outline-hover-neon" style="border-color: #76b900; color: #76b900; background: transparent;">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contato" class="bg-black py-5 border-top border-dark">
+    <div class="container py-5" style="max-width: 650px;">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-white mb-2">Central de Suporte</h2>
+            <p class="text-secondary small mx-auto" style="max-width: 450px;">
+                Precisa de ajuda com alguma chave ou ativação? Nossa equipe responde rápido.
+            </p>
+        </div>
+
+        <form class="row g-4">
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control bg-dark border-secondary text-white h-auto py-3 px-4" id="nome" placeholder="Seu nome completo">
+                    <label for="nome" class="text-secondary px-4">Seu nome completo</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="email" class="form-control bg-dark border-secondary text-white h-auto py-3 px-4" id="email" placeholder="nome@exemplo.com">
+                    <label for="email" class="text-secondary px-4">E-mail para retorno</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control bg-dark border-secondary text-white px-4 pt-4" id="mensagem" placeholder="Como podemos te ajudar?" style="height: 140px;"></textarea>
+                    <label for="mensagem" class="text-secondary px-4">Como podemos te ajudar?</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn w-100 fw-bold py-3 text-black text-uppercase tracking-wider btn-hover-neon border-0" style="background-color: #76b900;">
+                    Enviar Mensagem
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="bg-dark text-center text-secondary p-4 border-top border-black small">
+    © 2026 GameStore - Todos os direitos reservados.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
 </body>
 </html>
