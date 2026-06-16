@@ -1,0 +1,147 @@
+
+/* =========================
+   CONTATO
+========================= */
+#contato{
+
+    background:#141414 !important;
+}
+
+.form-control{
+
+    background:#222;
+
+    border:1px solid #333;
+
+    color:white;
+}
+
+.form-control:focus{
+
+    background:#222;
+
+    color:white;
+
+    border-color:var(--verde);
+
+    box-shadow:
+    0 0 10px var(--verde);
+}
+
+/* CONTATO eu mudei aleks */
+.contato{
+    background: #111827;
+    padding: 80px 20px;
+    color: white;
+}
+
+.contato h2{
+    text-align: center;
+    color: #7CFF4F;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #cfcfcf;
+}
+
+.contato-container{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.info-contato,
+.formulario{
+    background: #1a1d24;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #2a2d35;
+}
+
+.info-contato{
+    flex: 1;
+    min-width: 280px;
+}
+
+.info-contato h3{
+    color: #7CFF4F;
+    margin-bottom: 20px;
+}
+
+.info-contato p{
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.redes{
+    margin-top: 25px;
+}
+
+.redes a{
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #7CFF4F;
+    border: 1px solid #7CFF4F;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.redes a:hover{
+    background: #7CFF4F;
+    color: black;
+}
+
+.formulario{
+    flex: 2;
+    min-width: 320px;
+}
+
+.formulario input,
+.formulario textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #7CFF4F;
+    background: #0f1117;
+    color: white;
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus{
+    box-shadow: 0 0 15px rgba(124,255,79,0.7);
+}
+
+.formulario button{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #7CFF4F;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.formulario button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(124,255,79,0.8);
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .contato h2{
+        font-size: 2.2rem;
+    }
+}
