@@ -108,4 +108,4 @@ const jogos = [
 
 const pointerButtons = document.querySelectorAll('.btn-pointer');
 const buyButtons = document.querySelectorAll('.buy-btn')
-
+console.log('uou')
