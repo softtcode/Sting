@@ -139,9 +139,201 @@
     box-shadow: 0 0 20px rgba(124,255,79,0.8);
 }
 
+.nvidia-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1050;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 62px;
+    min-height: 62px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #76b900 0%, #5a8c00 100%);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(118, 185, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.nvidia-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(118, 185, 0, 0.4);
+    filter: brightness(1.05);
+}
+
+.nvidia-card-container {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-image: radial-gradient(circle at top left, rgb(0, 0, 0), transparent), radial-gradient(circle at bottom right, rgb(0, 0, 0), transparent);
+}
+
+.nvidia-card-container.visible {
+    display: flex;
+}
+
+.nvidia-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    width: min(560px, 100%);
+    background: rgba(15, 18, 12, 0.96);
+    border: 1px solid rgba(118, 185, 0, 0.22);
+    border-radius: 28px;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+    padding: 3rem;
+    color: #f3f7e8;
+    overflow: hidden;
+    animation: nvidiaCardShow 0.4s ease-out forwards;
+}
+
+.nvidia-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(118, 185, 0, 0.16), transparent 45%, rgba(118, 185, 0, 0.04));
+    pointer-events: none;
+    border-radius: 28px;
+}
+
+.nvidia-card h1 {
+    margin: 0 0 24px;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    color: #d5ff8f;
+    position: relative;
+    z-index: 1;
+}
+
+.nvidia-field {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 18px;
+}
+
+.nvidia-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b8d993;
+    font-size: 0.95rem;
+}
+
+.nvidia-card input,
+.nvidia-card textarea {
+    width: 100%;
+    border: 1px solid rgba(118, 185, 0, 0.25);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #f7f9e9;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.nvidia-card input,
+.nvidia-card textarea,
+.nvidia-card button {
+    box-sizing: border-box;
+}
+
+.nvidia-card input:focus,
+.nvidia-card textarea:focus {
+    border-color: #76b900;
+    box-shadow: 0 0 0 4px rgba(118, 185, 0, 0.14);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.nvidia-card button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #76b900 0%, #5a8c00 100%);
+    color: #071400;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.nvidia-card button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #88d601 0%, #6ba500 100%);
+}
+
+#add-game-form {
+    width: 100%;
+}
+
+/*ANIMAÇÃO DO CARD DE CRIAÇÃO DE JOGO*/
+@keyframes nvidiaCardShow {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(8px);
+    }
+
+    60% {
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}   
+
 /* RESPONSIVO */
 @media(max-width:768px){
     .contato h2{
         font-size: 2.2rem;
     }
+    .nvidia-card {
+        padding: 28px 22px;
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+    }
+    .nvidia-field label {
+        font-size: 0.95rem;
+    }
+    .nvidia-card input,
+    .nvidia-card textarea {
+        padding: 12px 14px;
+    }
+    .nvidia-card textarea {
+        min-height: 140px;
+    }
 }
+
+@media(max-width:576px){
+    .nvidia-card-container {
+        padding: 12px;
+    }
+    .nvidia-card {
+        border-radius: 20px;
+        padding: 22px 18px;
+    }
+    .nvidia-card h1 {
+        font-size: 1.75rem;
+    }
+}
+

@@ -102,9 +102,156 @@ const jogos = [
   {
     nome: "Zelda: Ocarina of Time",
     urlImagem: "https://imgs.search.brave.com/Ak07dD99SqLfyoFBzhj3zUEvNRdpTIbLsCUvOmxjvfs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mZWVk/ZWRpZ25vLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Ni8wNi96ZWxkYS1v/Y2FyaW5hLW9mLXRp/bWUtMDEtMTYtMDYt/MjYtMTAyNHg1NzYu/anBnLndlYnA",
-    descricao: "Um homúnculo chamado Greg",
+    descricao: "Um homúnculo chamado Greg.",
     preco: 300.00,
     urlSteam: "https://www.nintendo.com/pt-br/store/products/the-legend-of-zelda-ocarina-of-time-switch-2/"
+  },
+  {
+    nome: "Spider-Man Remastered",
+    urlImagem: "https://imgs.search.brave.com/E70psvXR5muW28JacbGROK6R5bNo7PErgIM-o8jE0_g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qb2dh/bmRvY2FzdWFsbWVu/dGUuY29tLmJyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIwLzEx/L3Jldmlldy1tYXJ2/ZWxzLXNwaWRlci1t/YW4tcHM0LWNhcGEu/anBn",
+    descricao: "Em Marvel's Spider-Man Remasterizado, os mundos de Peter Parker e Spider-Man entram em conflito em uma história original cheia de ação. Enfrente vilões icônicos, explore uma Nova York vibrante e experimente a sensação de ser o Homem-Aranha como nunca antes.",
+    preco: 249.90,
+    urlSteam: "https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/"
+  },
+  {
+    nome: "Assassin's Creed Valhalla",
+    urlImagem: "https://imgs.search.brave.com/rM62FznnUIf_G9myL4IPEfs709j-RYyH7JkuNORsZlQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDYxOTY1/NzUuanBn",
+    descricao: "Em Assassin's Creed Valhalla, assuma o papel de Eivor, um feroz guerreiro viking. Explore um mundo aberto vibrante, construa seu assentamento e lute para conquistar a Inglaterra em uma saga épica de conquista e sobrevivência.",
+    preco: 199.99,
+    urlSteam: "https://store.steampowered.com/app/2208920/Assassins_Creed_Valhalla/"
+  },
+  {
+    nome: "God of War",
+    urlImagem: "https://imgs.search.brave.com/kUUaWFDKxyLaiWiYsNKBD6henxa8B9jXT_3rmfznccA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9maWxl/cy50ZWNub2Jsb2cu/bmV0L3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzAxL2dvZC1v/Zi13YXItMjAxOC0w/MDQtMTA2MHg1OTYu/anBn",
+    descricao: "Kratos inicia uma nova jornada ao lado de seu filho Atreus nos reinos da mitologia nórdica. Enfrente deuses, monstros e descubra uma emocionante história de redenção.",
+    preco: 199.90,
+    urlSteam: "https://store.steampowered.com/app/1593500/God_of_War/"
+  },
+  {
+    nome: "God of War Ragnarök",
+    urlImagem: "https://imgs.search.brave.com/0CHSYd51ylrgjg1TC2x5CVklKcJCwiDgyVG67S1Euy4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDExNDg0/ODgzLmpwZw",
+    descricao: "O fim dos tempos se aproxima. Kratos e Atreus devem enfrentar o Ragnarök em uma aventura épica repleta de ação, emoção e batalhas contra os deuses nórdicos.",
+    preco: 249.90,
+    urlSteam: "https://store.steampowered.com/app/2322010/God_of_War_Ragnarok/"
+  },
+  {
+    nome: "Ghost of Tsushima Director's Cut",
+    urlImagem: "https://imgs.search.brave.com/3SBpxaJv3k0muRPw4IzVzEWJxjPpfeegV8JavIuQiqo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZXVw/cy5jb20uYnIvd3At/Y29udGVudC91cGxv/YWRzLzIwMjEvMDcv/R2hvc3Qtb2YtVHN1/c2hpbWEtMi5qcGcu/d2VicA",
+    descricao: "Torne-se Jin Sakai e lute para libertar Tsushima da invasão mongol. Domine a espada samurai e as táticas furtivas do Fantasma.",
+    preco: 249.90,
+    urlSteam: "https://store.steampowered.com/app/2215430/Ghost_of_Tsushima_DIRECTORS_CUT/"
+  },
+  {
+    nome: "Black Myth: Wukong",
+    urlImagem: "https://imgs.search.brave.com/aGbwtrEOrv5xkkkcvcrYiQPcZCgvd3mSUaR-sk95H2A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZXVw/cy5jb20uYnIvd3At/Y29udGVudC91cGxv/YWRzLzIwMjQvMDgv/QmxhY2stTXl0aC1X/dWtvbmcuanBlZw",
+    descricao: "Inspirado na clássica lenda chinesa Jornada ao Oeste, enfrente criaturas míticas e domine habilidades extraordinárias em um RPG de ação impressionante.",
+    preco: 229.90,
+    urlSteam: "https://store.steampowered.com/app/2358720/Black_Myth_Wukong/"
+  },
+  {
+    nome: "Sekiro: Shadows Die Twice",
+    urlImagem: "https://imgs.search.brave.com/t3woZ_pHuA7MqtmP8Der4dEYCqPoghZ6mBXA8T8stcg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9qb2dh/bmRvY2FzdWFsbWVu/dGUuY29tLmJyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzAy/L1Nla2lyby1TaGFk/b3dzLURpZS1Ud2lj/ZS1DYXBhLTkwMHg1/MDYuanBn",
+    descricao: "Assuma o papel do Lobo de Um Braço Só e trilhe um caminho de vingança no Japão feudal. Um desafio intenso focado em habilidade e precisão.",
+    preco: 274.90,
+    urlSteam: "https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice/"
+  },
+  {
+    nome: "Dark Souls III",
+    urlImagem: "https://imgs.search.brave.com/Z4PZmgDXx-HVdGLa5AxtLzQJQ4UNfyf8oWx9cI4-aKQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z2FtZXJzZWdhbWVz/LmNvbS5ici93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNi8wNC9E/QVJLU09VTF9mYWNl/Ym9va19taW5pLmpw/Zw",
+    descricao: "Explore um mundo sombrio e decadente, enfrente chefes memoráveis e descubra os segredos do ciclo do fogo em um dos RPGs mais influentes da história.",
+    preco: 257.90,
+    urlSteam: "https://store.steampowered.com/app/374320/DARK_SOULS_III/"
+  },
+  {
+    nome: "Starfield",
+    urlImagem: "https://imgs.search.brave.com/7vsXcdCs76p7CY453ZSB8yNB7_bEHe9eXwFr3v0F8gY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/dWhkcGFwZXIuY29t/L3dhbGxwYXBlci9z/dGFyZmllbGQtYXN0/cm9uYXV0LXZpZGVv/LWdhbWUtNzkwQDFA/bA",
+    descricao: "Aventure-se pelas estrelas em um vasto universo de exploração espacial. Personalize sua nave, descubra planetas e escreva sua própria história.",
+    preco: 299.90,
+    urlSteam: "https://store.steampowered.com/app/1716740/Starfield/"
+  },
+  {
+    nome: "Forza Horizon 5",
+    urlImagem: "https://imgs.search.brave.com/xZ5C5WYeWAFUMzAguUJoOMOTj1UmO_TJ_ecqDfnGcjU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wMi50/cnJzZi5jb20vaW1h/Z2UvZmdldC9jZi83/NzQvMC9pbWFnZXMu/dGVycmEuY29tLzIw/MjEvMDgvMjUvZm9y/emFfZ2FtZXNjb21f/aGVyby0xLmpwZw",
+    descricao: "Corra pelas paisagens vibrantes do México em um dos jogos de corrida mais aclamados dos últimos anos.",
+    preco: 249.00,
+    urlSteam: "https://store.steampowered.com/app/1551360/Forza_Horizon_5/"
+  },
+  {
+    nome: "Need for Speed Unbound",
+    urlImagem: "https://imgs.search.brave.com/QCmWiqQTsAfYIbyeYDDO63Lq-riDHx_ExmtZbBJulXU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvOTE4/NDg0Mi5qcGc",
+    descricao: "Dispute corridas ilegais, fuja da polícia e personalize carros incríveis em um estilo visual único e moderno.",
+    preco: 279.00,
+    urlSteam: "https://store.steampowered.com/app/1846380/Need_for_Speed_Unbound/"
+  },
+  {
+    nome: "DOOM Eternal",
+    urlImagem: "https://imgs.search.brave.com/0OYmbcNABINmyGRyMmHQoyF7HPpeePfeSS-5CoVwDK0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zcXVh/cmVkLXBvdGF0by5w/dC93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8wOS9ET09NLUV0/ZXJuYWwtQ2FwYS5q/cGc",
+    descricao: "Destrua hordas demoníacas em um dos FPS mais frenéticos já criados. Velocidade, brutalidade e metal pesado definem a experiência.",
+    preco: 99.90,
+    urlSteam: "https://store.steampowered.com/app/782330/DOOM_Eternal/"
+  },
+  {
+    nome: "Resident Evil Village",
+    urlImagem: "https://imgs.search.brave.com/X5Ar1yu_N8_-YGwAKBg-P-_U29JWpOHLieSGmQeUfNA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkwNTA3/NTIuanBn",
+    descricao: "Ethan Winters retorna em uma jornada aterrorizante por uma vila dominada por criaturas monstruosas e mistérios perturbadores.",
+    preco: 139.00,
+    urlSteam: "https://store.steampowered.com/app/1196590/Resident_Evil_Village/"
+  },
+  {
+    nome: "Dead Space Remake",
+    urlImagem: "https://imgs.search.brave.com/EP1jLOZ9rXJGRStzAEmmFynH1qMVoqYBN1c3cvDVdKM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5hcGkucGxheXN0/YXRpb24uY29tL3Z1/bGNhbi9hcC9ybmQv/MjAyMjEwLzExMTYv/VlREbTlBbkFvNUJt/cmV5RG9JS1lIdWtU/LnBuZw",
+    descricao: "Reviva o clássico do terror espacial completamente reconstruído com gráficos modernos e atmosfera ainda mais assustadora.",
+    preco: 249.00,
+    urlSteam: "https://store.steampowered.com/app/1693980/Dead_Space/"
+  },
+  {
+    nome: "Hades",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145360/header.jpg?t=1758127023",
+    descricao: "Lute para escapar do submundo em um roguelike premiado que combina ação intensa, personagens memoráveis e excelente narrativa.",
+    preco: 73.99,
+    urlSteam: "https://store.steampowered.com/app/1145360/Hades/"
+  },
+  {
+    nome: "Hollow Knight",
+    urlImagem: "https://imgs.search.brave.com/F1oG5Ak3vqS9YZO6uRA1ZDcOPpKj-zgj-CenmCg2a8c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zMi10/ZWNodHVkby5nbGJp/bWcuY29tL1B2WmdK/VDZMeG9BMXY1VkU0/cVJ3YmJJeDBJST0v/MHgwOjE1MDB4MTAw/MC85ODR4MC9zbWFy/dC9maWx0ZXJzOnN0/cmlwX2ljYygpL2ku/czMuZ2xiaW1nLmNv/bS92MS9BVVRIXzA4/ZmJmNDhiYzA1MjQ4/Nzc5NDNmZTg2ZTQz/MDg3ZTdhL2ludGVy/bmFsX3Bob3Rvcy9i/cy8yMDIwLzUveS9K/S20yZEtTQk9ubXdl/Uk04cTVYQS9ob2xs/b3cta25pZ2h0LWRv/d25sb2FkLWNhcGEu/anBn",
+    descricao: "Explore o reino subterrâneo de Hallownest em uma aventura metroidvania repleta de segredos, desafios e chefes incríveis.",
+    preco: 46.99,
+    urlSteam: "https://store.steampowered.com/app/367520/Hollow_Knight/"
+  },
+  {
+    nome: "Terraria",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg?t=1769844435",
+    descricao: "Cave, construa, explore e lute em um enorme mundo 2D repleto de itens, chefes e possibilidades praticamente infinitas.",
+    preco: 32.99,
+    urlSteam: "https://store.steampowered.com/app/105600/Terraria/"
+  },
+  {
+    nome: "Valheim",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/892970/de0bdcf6c008c508a79d8e75eb91fc67f4bebd5d/header.jpg?t=1765967243",
+    descricao: "Sobreviva em um mundo inspirado na mitologia nórdica, construa fortalezas e enfrente criaturas lendárias sozinho ou com amigos.",
+    preco: 37.99,
+    urlSteam: "https://store.steampowered.com/app/892970/Valheim/"
+  },
+  {
+    nome: "Palworld",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1623730/058bd87dc17a7179e07c446aa64d0574ca43ab9d/header.jpg?t=1780702171",
+    descricao: "Capture criaturas misteriosas chamadas Pals e utilize suas habilidades para explorar, construir, lutar e sobreviver.",
+    preco: 88.99,
+    urlSteam: "https://store.steampowered.com/app/1623730/Palworld/"
+  },
+  {
+    nome: "Lies of P",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1627720/header.jpg?t=1764565054",
+    descricao: "Uma releitura sombria da história de Pinóquio em um soulslike desafiador ambientado em uma cidade inspirada na Belle Époque.",
+    preco: 249.90,
+    urlSteam: "https://store.steampowered.com/app/1627720/Lies_of_P/"
+  },
+  {
+    nome: "Kingdom Come: Deliverance II",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1771300/header.jpg?t=1777975568",
+    descricao: "Continue a jornada de Henry em uma recriação extremamente detalhada da Europa medieval, com combate realista e narrativa profunda.",
+    preco: 299.90,
+    urlSteam: "https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/"
   }
 ].map((jogo, index) => ({ // adiciona id e slug a cada jogo usando map para criar um novo array com as propriedades adicionais
   ...jogo,
@@ -125,6 +272,30 @@ function gerarSlug(text) {
 // Formata valores numéricos como preço em reais (R$).
 function formatarPreco(valor) {
   return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+const localStorageJogosKey = 'sting_jogos';
+
+function carregarJogosSalvos() {
+  const raw = localStorage.getItem(localStorageJogosKey);
+  if (!raw) return;
+
+  try {
+    const salvos = JSON.parse(raw);
+    if (!Array.isArray(salvos)) return;
+
+    const existentes = new Set(jogos.map((jogo) => jogo.slug));
+    const novos = salvos.filter((jogo) => jogo && jogo.slug && !existentes.has(jogo.slug));
+
+    if (novos.length) {
+      jogos.push(...novos.map((jogo) => ({
+        ...jogo,
+        preco: typeof jogo.preco === 'string' ? parseFloat(jogo.preco.replace(',', '.')) || 0 : jogo.preco || 0,
+      })));
+    }
+  } catch (error) {
+    console.warn('Falha ao carregar jogos salvos do navegador:', error);
+  }
 }
 
 // Cria o HTML de um único card de jogo para exibição na página principal.
@@ -215,11 +386,32 @@ function preencherDetalhes() {
 }
 
 // Inicializa a aplicação após o carregamento do documento.
+function inicializarHamburgerMenu() {
+  const btn = document.querySelector('.navbar-toggler');
+  const menu = document.querySelector('#menu');
+  if (!btn || !menu) return;
+
+  const collapse = window.bootstrap?.Collapse?.getOrCreateInstance(menu, { toggle: false });
+
+  menu.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (collapse) {
+        collapse.hide();
+        return;
+      }
+      if (!menu.classList.contains('show')) return;
+      menu.classList.remove('show');
+      btn.classList.add('collapsed');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 function init() {
+  carregarJogosSalvos();
   renderJogos();
   preencherDetalhes();
+  inicializarHamburgerMenu();
 }
 
 document.addEventListener('DOMContentLoaded', init); // Garante que a função init seja chamada somente após o DOM estar completamente carregado. O JavaScript é carregado no head, ele pode tentar acessar elementos do DOM que ainda não existem, causando erros. Ao usar 'DOMContentLoaded', garantimos que o código só será executado depois que toda a estrutura HTML estiver pronta.
-
-console.log('Teste');
