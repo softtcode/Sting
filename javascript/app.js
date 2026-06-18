@@ -422,3 +422,4 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init); // Garante que a função init seja chamada somente após o DOM estar completamente carregado. O JavaScript é carregado no head, ele pode tentar acessar elementos do DOM que ainda não existem, causando erros. Ao usar 'DOMContentLoaded', garantimos que o código só será executado depois que toda a estrutura HTML estiver pronta.
+
