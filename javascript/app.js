@@ -93,6 +93,13 @@ const jogos = [
     urlSteam: "https://store.steampowered.com/app/1426210/It_Takes_Two/"
   },
   {
+    nome: "Sekiro: Shadows Die Twice",
+    urlImagem: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/814380/capsule_616x353.jpg?t=1762888662",
+    descricao: 'Acompanhe o shinobi Lobo na sua jornada para defender seu mestre ao titulo de "Sekiro".',
+    preco: 62.65,
+    urlSteam: "https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/"
+  },
+  {
     nome: "Devil May Cry 2",
     urlImagem: "https://imgs.search.brave.com/m34ac49qyhGd7zgrqWpgI7fwAqw1eQ-SAd4tZCfN8U4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNDg3/ODU3NC5qcGc",
     descricao: "Um helicóptero zumbi... e um tanque zumbi também.",
@@ -100,7 +107,7 @@ const jogos = [
     urlSteam: "https://store.steampowered.com/app/631510/Devil_May_Cry_HD_Collection/"
   },
   {
-    nome: "Zelda: Ocarina of Time",
+    nome: "Zelda: Ocarina of Time Remake",
     urlImagem: "https://imgs.search.brave.com/Ak07dD99SqLfyoFBzhj3zUEvNRdpTIbLsCUvOmxjvfs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mZWVk/ZWRpZ25vLmNvbS5i/ci93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Ni8wNi96ZWxkYS1v/Y2FyaW5hLW9mLXRp/bWUtMDEtMTYtMDYt/MjYtMTAyNHg1NzYu/anBnLndlYnA",
     descricao: "Um homúnculo chamado Greg.",
     preco: 300.00,
